@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<form id="selectionForm">
+			<label for="city">Город:</label>
+			<select id="city" name="city" v-model="selectedCity">
+				<option value="" selected>Выберите город</option>
+				<option v-for="city in cities" :value="city.cityName" :key="city.cityName">{{ city.cityName }}</option>
+			</select>
+	
+			<label for="department">Цех:</label>
+			<select id="department" name="department" v-model="selectedDepartment">
+				<option value="" selected>Выберите цех</option>
+				<option v-for="department in departments" :value="department.departmentName" :key="department.departmentName">{{ department.departmentName }}</option>
+			</select>
+	
+			<label for="employee">Сотрудник:</label>
+			<select id="employee" name="employee" v-model="selectedEmployee">
+				<option value="" selected>Выберите сотрудника</option>
+				<option v-for="employee in employees" :value="employee" :key="employee">{{ employee }}</option>
+			</select>
+	
+			<label for="brigade">Бригада:</label>
+			<select id="brigade" name="brigade" v-model="selectedBrigade">
+				<option value="" selected>Выберите бригаду</option>
+				<option value="Бригада 1">Бригада 1</option>
+				<option value="Бригада 2">Бригада 2</option>
+			</select>
+	
+			<label for="shift">Смена:</label>
+			<select id="shift" name="shift" v-model="selectedShift">
+				<option value="Дневная" selected>Дневная</option>
+				<option value="Ночная">Ночная</option>
+			</select>
+	
+			<button type="button" @click="saveCookie">Сохранить данные</button>
+		</form>
+	</div>
+</body>
+
+<style>
+	#selectionForm label, #selectionForm select, #selectionForm button {
+		display: block;
+		margin-bottom: 10px;
+	}
+</style>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="script.js"></script>
+</html>

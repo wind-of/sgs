@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Первая часть второго задания</title>
+</head>
+<body>
+	<form id="selectionForm">
+		<label for="city">Город:</label>
+		<select id="city" name="city">
+			<option value="">Выберите город</option>
+		</select>
+
+		<label for="department">Цех:</label>
+		<select id="department" name="department">
+			<option value="">Выберите цех</option>
+		</select>
+
+		<label for="employee">Сотрудник:</label>
+		<select id="employee" name="employee">
+			<option value="">Выберите сотрудника</option>
+		</select>
+
+		<label for="brigade">Бригада:</label>
+		<select id="brigade" name="brigade">
+			<option value="">Выберите бригаду</option>
+			<option value="Бригада 1">Бригада 1</option>
+			<option value="Бригада 2">Бригада 2</option>
+		</select>
+
+		<label for="shift">Смена:</label>
+		<select id="shift" name="shift">
+			<option value="Дневная">Дневная</option>
+			<option value="Ночная">Ночная</option>
+		</select>
+
+		<button type="button" id="saveButton">Сохранить данные</button>
+	</form>
+
+</body>
+<style>
+	#selectionForm label, #selectionForm select, #selectionForm button {
+		display: block;
+		margin-bottom: 10px;
+	}
+</style>
+<script src="script.js"></script>
+</html>
